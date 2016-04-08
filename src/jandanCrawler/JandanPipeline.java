@@ -31,6 +31,7 @@ public class JandanPipeline implements Pipeline {
 
     @Override
     public void process(ResultItems resultItems, Task task) {
+        System.out.println("get page: " + resultItems.getRequest().getUrl());
         for (Map.Entry<String, Object> entry : resultItems.getAll().entrySet()) {
             if(entry.getKey().equals("text")){
                 text = ((String)entry.getValue()).replace("[","").replace("]", "").replace(" ","").split(",");
@@ -58,7 +59,7 @@ public class JandanPipeline implements Pipeline {
                 sql.append(",("+ id[i] + ",'" + text[i] + "'," + support.get(i) + "," + unsupport.get(i) + "," + page + ")");
             }
             sql.append(";");
-            System.out.println(sql.toString());
+//            System.out.println(sql.toString());
             stmt.executeUpdate(sql.toString());
 
         } catch (ClassNotFoundException e) {
