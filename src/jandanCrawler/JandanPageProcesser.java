@@ -29,7 +29,7 @@ public class JandanPageProcesser implements PageProcessor {
         page.putField("page", page.getHtml().xpath("//span[@class='current-comment-page']/text()").regex("\\d+").toString());
 
         //遍历网址
-        page.addTargetRequests(page.getHtml().links().regex("^http://jandan\\.net/duan/page.\\d*").all());
+//        page.addTargetRequests(page.getHtml().links().regex("^http://jandan\\.net/duan/page.\\d*").all());
     }
 
     @Override
@@ -39,10 +39,10 @@ public class JandanPageProcesser implements PageProcessor {
 
     public static void main(String[] args) {
         Spider.create(new JandanPageProcesser())
-                .addUrl("http://jandan.net/duan")
+                .addUrl("http://jandan.net/duan/page-653")
                 .thread(5)
-//                .addPipeline(new ConsolePipeline())
-                .addPipeline(new JandanPipeline())
+                .addPipeline(new ConsolePipeline())
+//                .addPipeline(new JandanPipeline())
 //                .addPipeline(new FilePipeline("/home/workstation"))
                 .run();
     }
