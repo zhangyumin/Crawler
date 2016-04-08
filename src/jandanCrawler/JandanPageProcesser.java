@@ -26,7 +26,7 @@ public class JandanPageProcesser implements PageProcessor {
         page.putField("text", page.getHtml().xpath("div[@class='text']/p/text()").all().toString());
         page.putField("id", page.getHtml().xpath("//span[@class='righttext']/a/text()").all().toString());
         page.putField("support", page.getHtml().xpath("//div[@class='vote']/span/text()").regex("^\\d+$").all().toString());
-//        page.putField("url", page.getHtml().links().regex("^http://jandan.net/duan/page-.*").all());
+        page.putField("page", page.getHtml().xpath("//span[@class='current-comment-page']/text()").toString());
 
         //遍历网址
 //        page.addTargetRequests(page.getHtml().links().regex("^http://jandan\\.net/duan/page.\\d*").all());
@@ -42,7 +42,7 @@ public class JandanPageProcesser implements PageProcessor {
                 .addUrl("http://jandan.net/duan")
                 .thread(5)
                 .addPipeline(new ConsolePipeline())
-                .addPipeline(new JandanPipeline())
+//                .addPipeline(new JandanPipeline())
 //                .addPipeline(new FilePipeline("/home/workstation"))
                 .run();
     }
