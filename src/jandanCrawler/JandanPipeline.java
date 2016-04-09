@@ -25,7 +25,7 @@ import java.util.Map;
  */
 public class JandanPipeline implements Pipeline {
 
-    String text[],id[],judge[] = null;
+    String text[], id[], judge[] = null;
     ArrayList support = new ArrayList();
     ArrayList unsupport = new ArrayList();
     String page = null;
@@ -33,31 +33,21 @@ public class JandanPipeline implements Pipeline {
     @Override
     public void process(ResultItems resultItems, Task task) {
         System.out.println("get page: " + resultItems.getRequest().getUrl());
-        for (Map.Entry<String, Object> entry : resultItems.getAll().entrySet()) {
-            if(entry.getKey().equals("text")){
-                text = ((String)entry.getValue()).replace("[", "").replace("]", "").split("</p>, <p>");
-            }
-            else if (entry.getKey().equals("id")){
-                id = ((String)entry.getValue()).replace("[","").replace("]", "").replace(" ","").split(",");
-            }
-            else if (entry.getKey().equals("support")){
-                judge = ((String)entry.getValue()).replace("[","").replace("]","").replace(" ","").split(",");
-                for (int i = 0; i < judge.length; i+=2) {
-                    support.add(judge[i]);
-                    unsupport.add(judge[i+1]);
-                }
-            }
-            else if (entry.getKey().equals("page")){
-                page = (String)entry.getValue();
-            }
+        text = resultItems.get("text").toString().replace("[", "").replace("]", "").split(",");
+        id = resultItems.get("id").toString().replace("[", "").replace("]", "").replace(" ", "").split(",");
+        judge = resultItems.get("support").toString().replace("[", "").replace("]", "").replace(" ", "").split(",");
+        for (int i = 0; i < judge.length; i += 2) {
+            support.add(judge[i]);
+            unsupport.add(judge[i + 1]);
         }
+        page = resultItems.get("page");
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/crawler?useUnicode=true&characterEncoding=GBK","root","root");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/crawler?useUnicode=true&characterEncoding=GBK", "root", "root");
             Statement stmt = conn.createStatement();
-            StringBuffer sql = new StringBuffer("insert into jandan values (" + id[0] + ",'" + text[0].replace("<p>","").replace("</p>","") + "'," + support.get(0) + "," + unsupport.get(0) + "," + page + ")");
+            StringBuffer sql = new StringBuffer("insert into jandan values (" + id[0] + ",'" + text[0].replace("<p>", "").replace("</p>", "") + "'," + support.get(0) + "," + unsupport.get(0) + "," + page + ")");
             for (int i = 1; i < id.length; i++) {
-                sql.append(",("+ id[i] + ",'" + text[i].replace("<p>","").replace("</p>","") + "'," + support.get(i) + "," + unsupport.get(i) + "," + page + ")");
+                sql.append(",(" + id[i] + ",'" + text[i].replace("<p>", "").replace("</p>", "") + "'," + support.get(i) + "," + unsupport.get(i) + "," + page + ")");
             }
             sql.append(";");
             System.out.println(sql.toString());

@@ -23,7 +23,7 @@ public class JandanPageProcesser implements PageProcessor {
     @Override
     public void process(Page page) {
 //        page.putField("text", page.getHtml().$(".text p").all().toString());
-        page.putField("text", page.getHtml().xpath("div[@class='text']/p/text(1)").all());
+        page.putField("text", page.getHtml().xpath("div[@class='text']/p/text()").all());
         page.putField("id", page.getHtml().xpath("//span[@class='righttext']/a/text()").all().toString());
         page.putField("support", page.getHtml().xpath("//div[@class='vote']/span/text()").regex("^\\d+$").all().toString());
         page.putField("page", page.getHtml().xpath("//span[@class='current-comment-page']/text()").regex("\\d+").toString());
@@ -41,8 +41,8 @@ public class JandanPageProcesser implements PageProcessor {
         Spider.create(new JandanPageProcesser())
                 .addUrl("http://jandan.net/duan/page-1038")
                 .thread(5)
-                .addPipeline(new ConsolePipeline())
-//                .addPipeline(new JandanPipeline())
+//                .addPipeline(new ConsolePipeline())
+                .addPipeline(new JandanPipeline())
 //                .addPipeline(new FilePipeline("/home/workstation"))
                 .run();
     }
