@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f51e677-101f-4210-935a-1097a72e1b01" name="Default" comment="cancel output for sql">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Crawler/jandanCrawler/JandanPageProcesser.class" afterPath="$PROJECT_DIR$/out/production/Crawler/jandanCrawler/JandanPageProcesser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Crawler/jandanCrawler/JandanPipeline.class" afterPath="$PROJECT_DIR$/out/production/Crawler/jandanCrawler/JandanPipeline.class" />
+    <list default="true" id="9f51e677-101f-4210-935a-1097a72e1b01" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jandanCrawler/JandanPageProcesser.java" afterPath="$PROJECT_DIR$/src/jandanCrawler/JandanPageProcesser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jandanCrawler/JandanPipeline.java" afterPath="$PROJECT_DIR$/src/jandanCrawler/JandanPipeline.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -32,12 +30,37 @@
       <file leaf-file-name="JandanPageProcesser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/jandanCrawler/JandanPageProcesser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4777563">
-              <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.78723407">
+              <caret line="25" column="88" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1646#1647#0" expanded="true" />
-                <element signature="e#1673#1674#0" expanded="true" />
+                <element signature="e#1649#1650#0" expanded="true" />
+                <element signature="e#1676#1677#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Spider.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ideaLibSources/webmagic-core-0.5.3-sources.jar!/us/codecraft/webmagic/Spider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="307" column="0" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
+              <folding>
+                <element signature="e#8988#9945#0" expanded="true" />
+                <element signature="e#9944#9945#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Thread.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jdk1.8.0_65/src.zip!/java/lang/Thread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="960" column="0" selection-start-line="960" selection-start-column="0" selection-end-line="960" selection-end-column="0" />
+              <folding>
+                <element signature="e#37116#37117#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/src/jandanCrawler/JandanPipeline.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+              <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,8 +127,8 @@
         <option value="$PROJECT_DIR$/src/OschinaBlogPageProcessor.java" />
         <option value="$PROJECT_DIR$/src/jandanPageProcesser.java" />
         <option value="$PROJECT_DIR$/src/jandanCrawler/jandanPageProcesser.java" />
-        <option value="$PROJECT_DIR$/src/jandanCrawler/JandanPageProcesser.java" />
         <option value="$PROJECT_DIR$/src/jandanCrawler/JandanPipeline.java" />
+        <option value="$PROJECT_DIR$/src/jandanCrawler/JandanPageProcesser.java" />
       </list>
     </option>
   </component>
@@ -583,7 +606,7 @@
       <created>1460025757412</created>
       <option name="number" value="Default" />
       <updated>1460025757412</updated>
-      <workItem from="1460025760102" duration="21526000" />
+      <workItem from="1460025760102" duration="28937000" />
     </task>
     <task id="LOCAL-00001" summary="add page Field">
       <created>1460117220097</created>
@@ -603,11 +626,17 @@
       <option name="project" value="LOCAL" />
       <updated>1460121913547</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test">
+      <created>1460126079039</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1460126079039</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21526000" />
+    <option name="totallyTimeSpent" value="28937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -631,7 +660,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4392237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4392237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -656,11 +685,12 @@
     <MESSAGE value="add page Field" />
     <MESSAGE value="complete jandanPipeline" />
     <MESSAGE value="cancel output for sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="cancel output for sql" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -747,10 +777,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/webmagic-core-0.5.3-sources.jar!/us/codecraft/webmagic/Spider.java">
+    <entry file="jar:///usr/lib/jdk1.8.0_65/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3326886">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -766,6 +796,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/lib/jdk1.8.0_65/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="960" column="0" selection-start-line="960" selection-start-column="0" selection-end-line="960" selection-end-column="0" />
+          <folding>
+            <element signature="e#37116#37117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/webmagic-core-0.5.3-sources.jar!/us/codecraft/webmagic/Spider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="307" column="0" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
+          <folding>
+            <element signature="e#8988#9945#0" expanded="true" />
+            <element signature="e#9944#9945#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$USER_HOME$/.ideaLibSources/webmagic-core-0.5.3-sources.jar!/us/codecraft/webmagic/pipeline/ConsolePipeline.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -777,7 +828,7 @@
     <entry file="file://$PROJECT_DIR$/src/jandanCrawler/JandanPipeline.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -786,12 +837,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jandanCrawler/JandanPageProcesser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4777563">
-          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.78723407">
+          <caret line="25" column="88" selection-start-line="25" selection-start-column="88" selection-end-line="25" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1646#1647#0" expanded="true" />
-            <element signature="e#1673#1674#0" expanded="true" />
+            <element signature="e#1649#1650#0" expanded="true" />
+            <element signature="e#1676#1677#0" expanded="true" />
           </folding>
         </state>
       </provider>

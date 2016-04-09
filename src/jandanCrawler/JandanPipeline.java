@@ -35,7 +35,7 @@ public class JandanPipeline implements Pipeline {
         System.out.println("get page: " + resultItems.getRequest().getUrl());
         for (Map.Entry<String, Object> entry : resultItems.getAll().entrySet()) {
             if(entry.getKey().equals("text")){
-                text = ((String)entry.getValue()).replace("[","").replace("]", "").replace(" ","").split(",");
+                text = ((String)entry.getValue()).replace("[", "").replace("]", "").split("</p>, <p>");
             }
             else if (entry.getKey().equals("id")){
                 id = ((String)entry.getValue()).replace("[","").replace("]", "").replace(" ","").split(",");
@@ -53,15 +53,15 @@ public class JandanPipeline implements Pipeline {
         }
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/crawler?characterEncoding=GBK","root","root");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/crawler?useUnicode=true&characterEncoding=GBK","root","root");
             Statement stmt = conn.createStatement();
-            StringBuffer sql = new StringBuffer("insert into jandan values (" + id[0] + ",'" + text[0] + "'," + support.get(0) + "," + unsupport.get(0) + "," + page + ")");
+            StringBuffer sql = new StringBuffer("insert into jandan values (" + id[0] + ",'" + text[0].replace("<p>","").replace("</p>","") + "'," + support.get(0) + "," + unsupport.get(0) + "," + page + ")");
             for (int i = 1; i < id.length; i++) {
-                sql.append(",("+ id[i] + ",'" + text[i] + "'," + support.get(i) + "," + unsupport.get(i) + "," + page + ")");
+                sql.append(",("+ id[i] + ",'" + text[i].replace("<p>","").replace("</p>","") + "'," + support.get(i) + "," + unsupport.get(i) + "," + page + ")");
             }
             sql.append(";");
-//            System.out.println(sql.toString());
-            stmt.executeUpdate(sql.toString());
+            System.out.println(sql.toString());
+//            stmt.executeUpdate(sql.toString());
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
