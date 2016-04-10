@@ -41,8 +41,8 @@ public class JandanPageProcesser implements PageProcessor {
         Spider.create(new JandanPageProcesser())
                 .addUrl("http://jandan.net/duan/page-1038")
                 .thread(5)
-//                .addPipeline(new ConsolePipeline())
-                .addPipeline(new JandanPipeline())
+                .addPipeline(new ConsolePipeline())
+//                .addPipeline(new JandanPipeline())
 //                .addPipeline(new FilePipeline("/home/workstation"))
                 .run();
     }
