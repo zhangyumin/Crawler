@@ -4,6 +4,7 @@ import us.codecraft.webmagic.model.ConsolePageModelPipeline;
 import us.codecraft.webmagic.model.OOSpider;
 import us.codecraft.webmagic.model.annotation.ExtractBy;
 import us.codecraft.webmagic.model.annotation.TargetUrl;
+import us.codecraft.webmagic.pipeline.FilePageModelPipeline;
 
 import java.util.List;
 
