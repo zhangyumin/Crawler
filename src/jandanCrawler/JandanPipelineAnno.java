@@ -18,5 +18,6 @@ public class JandanPipelineAnno implements PageModelPipeline {
     @Override
     public void process(Object o, Task task) {
         String result = ToStringBuilder.reflectionToString(o);
+//        String text = result.split();
     }
 }
